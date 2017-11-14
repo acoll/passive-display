@@ -1,0 +1,10 @@
+{
+  "name": "passive-display",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "serve public && open http://localhost:5000"
+  },
+  "dependencies": {
+    "serve": "^6.4.1"
+  }
+}
