@@ -1,2 +1,4 @@
 # passive-display
-Yea
+
+
+npm install && npm start
