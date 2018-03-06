@@ -1,0 +1,7 @@
+type Event {
+  id: ID!
+  status: String
+  summary: String
+  start: Int
+  end: Int
+}

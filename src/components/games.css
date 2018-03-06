@@ -1,0 +1,27 @@
+.standings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2vw;
+}
+
+.standings h3 {
+  font-size: 18px;
+}
+
+.standings *:last-child {
+  justify-self: flex-end;
+}
+
+.live_game {
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+}
+
+.live_game > :nth-child(2) {
+  justify-self: center;
+}
+
+.live_game_play {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}

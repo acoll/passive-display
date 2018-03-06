@@ -1,0 +1,6 @@
+type Query {
+  forecast(lat: Float, long: Float, time: Int): DarkSkyWeatherForecast
+  mySportsFeeds: MySportsFeeds!
+  events: [Event]
+  twitterLists: [TwitterList]
+}

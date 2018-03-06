@@ -1,0 +1,106 @@
+type MySportsFeeds {
+  full_game_schedule(date: String): FullGameSchedule
+  conference_team_standings: ConferenceTeamStandings
+  game_playbyplay: GamePlayByPlay
+  game_boxscore: GameBoxscore
+}
+
+type FullGameSchedule {
+  lastUpdatedOn: String
+  gameentry: [GameEntry]
+}
+
+type GameEntry {
+  id: ID
+  scheduleStatus: String
+  originalDate: String
+  originalTime: String
+  delayedOrPostponedReason: String
+  date: String!
+  time: String!
+  awayTeam: Team!
+  homeTeam: Team!
+  location: String!
+}
+
+type Team {
+  ID: ID!
+  City: String!
+  Name: String!
+  Abbreviation: String!
+}
+
+type ConferenceTeamStandings {
+  lastUpdatedOn: String
+  conference: [ConferenceStandings]
+}
+
+type ConferenceStandings {
+  name: String
+  teamentry: [TeamStanding]
+}
+
+type TeamStanding {
+  team: Team!
+  rank: Int
+  stats: TeamStandingStats
+}
+
+type TeamStandingStats {
+  GamesBack: TeamStandingStat
+}
+
+type TeamStandingStat {
+  category: String
+  abbreviation: String
+  text: String
+}
+
+type GamePlayByPlay {
+  lastUpdatedOn: String
+  game: GameEntry
+  plays: GamePlays
+}
+
+type GamePlays {
+  play: [GamePlay]
+}
+
+type GamePlay {
+  time: String
+  quarter: String
+  data: String
+}
+
+type GameBoxscore {
+  lastUpdatedOn: String
+  game: GameEntry
+  quarterSummary: QuarterSummary
+}
+
+type QuarterSummary {
+  quarter: [QuarterSummaryDetail]
+  quarterTotals: QuarterTotals
+}
+
+type QuarterSummaryDetail {
+  number: Int
+  awayScore: Int
+  homeScore: Int
+  scoring: QuarterSummaryDetailScoring
+}
+
+type QuarterSummaryDetailScoring {
+  scoringPlay: [ScoringPlay]
+}
+
+type ScoringPlay {
+  time: String
+  teamAbbreviation: String
+  playDescription: String
+}
+
+type QuarterTotals {
+  awayScore: Int
+  homeScore: Int
+}

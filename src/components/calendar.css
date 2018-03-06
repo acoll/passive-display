@@ -1,0 +1,14 @@
+.daySmall {
+  display: grid;
+  grid-template-columns: auto 16px auto 1fr;
+  grid-column-gap: 8px;
+  align-items: end;
+}
+
+.daySmall .suntimes {
+  text-align: right;
+}
+
+.icon {
+  border: 1px solid white;
+}

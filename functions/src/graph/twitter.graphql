@@ -1,0 +1,25 @@
+type TwitterList {
+  id: ID!
+  name: String!
+  description: String!
+  slug: String!
+  full_name: String!
+  statuses(count: Int!): [Tweet]
+}
+
+type Tweet {
+  id: ID!
+  created_at: String!
+  full_text: String!
+  truncated: Boolean!
+  favorite_count: Int!
+  retweet_count: Int!
+  user: TweetUser!
+}
+
+type TweetUser {
+  id: ID!
+  name: String!
+  screen_name: String!
+  profile_image_url_https: String!
+}

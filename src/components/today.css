@@ -1,0 +1,21 @@
+.today {
+  padding-top: 1vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3vw;
+}
+
+.today .weather {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1vw;
+}
+
+.today .weather .weather_details > div {
+  padding-bottom: 1vh;
+}
+
+.events {
+  display: grid;
+  grid-row-gap: 0.4vh;
+}

@@ -1,0 +1,12 @@
+.news_item p {
+  font-size: 18px;
+  padding-bottom: 1vh;
+}
+
+.news_item p:nth-child(2) {
+  text-align: right;
+}
+
+.news_item cite {
+  font-size: 16px;
+}

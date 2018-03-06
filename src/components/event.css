@@ -1,0 +1,24 @@
+.large_event {
+  display: grid;
+  grid-template-columns: 8vw 90px 1fr auto;
+  align-items: center;
+  grid-column-gap: 1vw;
+  font-size: 22px;
+}
+
+.large_event > span:nth-child(2) {
+  text-align: right;
+}
+
+.event {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  grid-column-gap: 1vw;
+  width: 80%;
+  font-size: 16px;
+
+  .eventSummary {
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,13 @@
+.section {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-row-gap: 0px;
+}
+
+.section hr {
+  margin: 8px 0;
+  border: none;
+  height: 2px;
+  background-color: white;
+  width: 100%;
+}

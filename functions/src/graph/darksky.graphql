@@ -1,0 +1,123 @@
+type DarkSkyWeatherForecast {
+  latitude: Float
+  longitude: Float
+  timezone: String
+  currently: CurrentWeather
+  minutely: MinutelyWeather
+  hourly: HourlyWeather
+  daily: DailyWeather
+  alerts: [Alert]
+}
+
+type CurrentWeather {
+  time: Int!
+  summary: String!
+  icon: String!
+  nearestStormDistance: Float!
+  precipIntensity: Float!
+  precipIntensityError: Float!
+  precipProbability: Float!
+  precipType: Float!
+  temperature: Float!
+  apparentTemperature: Float!
+  dewPoint: Float!
+  humidity: Float!
+  pressure: Float!
+  windSpeed: Float!
+  windGust: Float!
+  windBearing: Float!
+  cloudCover: Float
+  uvIndex: Int!
+  visbility: Float!
+  ozone: Float!
+}
+
+type MinutelyWeather {
+  summary: String
+  icon: String
+  data: [MinutelyWeatherEntry]
+}
+
+type HourlyWeather {
+  summary: String
+  icon: String
+  data: [HourlyWeatherEntry]
+}
+
+type DailyWeather {
+  summary: String
+  icon: String
+  data: [DailyWeatherEntry]
+}
+
+type MinutelyWeatherEntry {
+  time: Int!
+  precipIntensity: Float!
+  precipIntensityError: Float!
+  precipProbability: Float!
+  precipType: Float!
+}
+
+type HourlyWeatherEntry {
+  time: Int!
+  summary: String!
+  icon: String!
+  precipIntensity: Float!
+  precipProbability: Float!
+  precipType: Float!
+  temperature: Float!
+  apparentTemperature: Float!
+  dewPoint: Float!
+  humidity: Float!
+  pressure: Float!
+  windSpeed: Float!
+  windGust: Float!
+  windBearing: Float!
+  cloudCover: Float!
+  visbility: Float!
+  ozone: Float!
+}
+
+type DailyWeatherEntry {
+  time: Int!
+  summary: String!
+  icon: String!
+  sunriseTime: Int
+  sunsetTime: Int
+  moonPhase: Float
+  precipIntensity: Float!
+  precipIntensityMax: Float!
+  precipIntensityMaxTime: Int!
+  precipProbability: Float!
+  precipType: Float!
+  temperatureHigh: Float!
+  temperatureHighTime: Int!
+  temperatureLow: Float!
+  temperatureLowTime: Int!
+  apparentTemperatureHigh: Float!
+  apparentTemperatureHighTime: Int!
+  apparentTemperatureLow: Float!
+  apparentTemperatureLowTime: Int!
+  dewPoint: Float!
+  humidity: Float!
+  pressure: Float!
+  windSpeed: Float!
+  windGust: Float!
+  windGustTime: Int!
+  windBearing: Float!
+  cloudCover: Float!
+  uvIndex: Int!
+  uvIndexTime: Int!
+  visbility: Float!
+  ozone: Float!
+}
+
+type Alert {
+  title: String!
+  regions: [String]
+  severity: String
+  time: Int
+  expires: Int
+  description: String
+  uri: String
+}
